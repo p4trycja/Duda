@@ -8,5 +8,5 @@ def draw():
     else:
         line(width, height, mouseX, mouseY)
 
-    
+#2pkt
     

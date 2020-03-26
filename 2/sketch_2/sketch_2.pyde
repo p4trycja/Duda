@@ -34,3 +34,6 @@ def draw():
        
     if(x == 50):
         exit()
+        
+# ruch super, ale wewnętrznie miały być też powtórzone kolekcje, szkoda, że nie użyłaś ich do przechowywania kolorów
+#1,25 pkt
