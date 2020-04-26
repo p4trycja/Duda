@@ -1,12 +1,18 @@
 def setup(): 
     size(400, 400) 
     textSize(200)   
-    strokeWeight(2) 
+    strokeWeight(2)
+    global kolor1, kolor2 # tak jest korzystniej dla czytelności - inspiracja na przyszłość
+    kolor1 = (36, 222, 97)
+    kolor2 = (52, 76, 245)
+    global czyD
+    czyD = False
     
 def draw():  
 
     clear()
     background(157, 166, 206)
+    global czyD
 
     text("P", width/2-50, height/2)
     k = get(mouseX, mouseY)
@@ -15,7 +21,7 @@ def draw():
     
     if (k == -1):
         text("P", width/2-50, height/2)
-        fill(36, 222, 97)
+        fill(*kolor1)
             
     text("P", width/2-50, height/2)
     fill(255, 255, 255)
@@ -25,17 +31,20 @@ def draw():
         if keyCode == 39:
             fill(255, 255, 255)
             text("P", width/2-50, height/2)
-            fill(52, 76, 245)
+            fill(*kolor2)
             text("D", width/2+50, height/2)
       
     if keyPressed:
         if key == "d":
             text("D", width/2+50, height/2)
-            fill(52, 76, 245)
-        if keyCode == 37:
-            fill(36, 222, 97)
+            fill(*kolor2)
+            czyD = True
+        if keyCode == 37 and czyD:
+            fill(*kolor1)
             text("P", width/2-50, height/2)
             fill(255, 255, 255)
+    else:
+        czyD = False
                     
     text("D", width/2+50, height/2)
     fill(255, 255, 255)        
@@ -50,4 +59,7 @@ def draw():
     s.vertex(width-50, height/3*2+80)
     s.vertex(width-100, height/3*2-20)
     s.endShape(CLOSE)
-    shape(s, 25, 25) 
+    shape(s, 25, 25)
+    
+# P zaznaczało się przy samej strzałce w lewo, ale to było tricky, więc uznaję, poprawiłąm, przeanalizuj rozwiązanie (dwa klawisze nie mogą być policzone jako kliknięte w jednej klatce)
+#2pkt
