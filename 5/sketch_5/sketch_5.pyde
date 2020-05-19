@@ -29,7 +29,7 @@ def setup():
     global sekundy
     img = loadImage("abc.png")
     global tarcza 
-    tarcza = Stoper(width/2, 350, 400)
+    tarcza = Stoper(width/2, 350, 400) # miały być utworzone dwa obiekty i taki dobór klasy, żeby ich powielanie miało sens
 
 def mousePressed():
     tarcza.wcisnij()
@@ -54,4 +54,5 @@ def draw():
     sekundy = tarcza.obrot/6 - 1
     print(sekundy)
     
-    
+# plus do aktywności za kreatywność w sferze wizualnej, szkoda, że w kodzie już nieco mniejsza i opierasz się głównie na kalce moich metod i atrybutów
+# 1,5pkt
