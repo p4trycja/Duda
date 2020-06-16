@@ -18,10 +18,11 @@ class PasiastyKwadrat(Kwadrat):
 class KolorowyKwadrat(Kwadrat):
     def sketchKolorowy(self, x, y):
         Kwadrat.sketch(self, x, y)
-        noStroke()
+        noStroke() # przez to użycie kpasiaste kwadraty nie mają szansy sie narysować po kolorowych, bo nie przywracasz stroke, a paski należą do stroke
         colorMode(HSB, 360, 100, 100)                                         
         for  i in range(x):  
             fill(i, 100, 100)
+        # następne kwadraty też się będą rysowały na ten kolor, nawet jeśli nie będą należały do tej klasy
         
 def setup():
     size(500, 500)
@@ -52,3 +53,7 @@ def setup():
     malyKolorowyKwadrat.sketchKolorowy(125, 150)
     malyKolorowyKwadrat = KolorowyKwadrat(50.0) 
     malyKolorowyKwadrat.sketchKolorowy(350, 150)
+    
+    malyPasiastyKwadrat.sketchPasiasty(100,350, 8) # zamiast być pasiasty będzie kolorowy
+    
+#1,75pkt
