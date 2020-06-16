@@ -58,3 +58,5 @@ def mouseClicked():
             pet.gimmePaw()
         if isinstance(pet, Tarantula):
             pet.gimmiePajak()
+            
+# 2 pkt
