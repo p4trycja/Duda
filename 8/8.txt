@@ -1,0 +1,12 @@
+PLAN ORGANIZACJI KLAS W PROGRAMIE BANKOMATU
+
+Bankomat
+dostepne_srodki_w_bankomacie
+odejmijsrodki
+dodajsrodki
+
+Klient
+dostepne_srodki_na_koncie
+sprawdzswojesrodki
+wyplacpieniadze
+wplacpieniadze
