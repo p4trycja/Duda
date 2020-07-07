@@ -4,3 +4,6 @@ Mê¿czyzna 2: za³ó¿ kosz na kosiarkê, to bêdziesz móg³ zbieraæ skoszon¹ trawê i n
 Mê¿czyzna 1: zak³ada kosz i kosi ³¹kê dalej
 
 WZORZEC PROJEKTOWY - OBSERWATOR
+
+trochê mylace, bo sytuacja siê nie zmieni³a, obserwator reaguje by poinformowaæ o mó¿liwoœci na zmianê (pod³¹czenie czegoœ), tu de facto nie ma zmiany, sytuacja jest ta sama i dodanie czegoœ bardziej wtedy dzia³¹ jak dekorator
+1pkt
