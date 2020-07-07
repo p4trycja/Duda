@@ -57,3 +57,5 @@ def mouseClicked():
             library.lendBook(Patrycja.requestBook("Naocznosc"))
         if mouseY >40 and mouseY <60:
             library.addBook(Patrycja.returnBook())
+            
+# 0,5/0,5pkt za tę część

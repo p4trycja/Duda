@@ -5,8 +5,11 @@ dostepne_srodki_w_bankomacie
 odejmijsrodki
 dodajsrodki
 
-Klient
+Klient # jeden klient może mieć wiele kart i kont, lepszym pomysłem byłaby klasa karta lub konto
 dostepne_srodki_na_koncie
 sprawdzswojesrodki
 wyplacpieniadze
 wplacpieniadze
+PIN/inne uwierzytelnianie?
+
+1pkt/1,5pkt za tę część
