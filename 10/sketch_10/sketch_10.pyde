@@ -17,7 +17,7 @@ class Library():
             self.availableBooks.append(returnedBook)
             print("Client have returned the book. Thank You for using our service :)")
 
-class Customer(): 
+class Customer():
     book = "" 
     haveBook = False
     def requestBook(self, book): 
@@ -61,42 +61,24 @@ def mouseClicked():
 #UNIT TEST 1
 
 import unittest
-class TestBibliotekiJeden(unittest.TestCase):
-     
-    book = "" 
-    haveBook = False
-    def requestBook(self, book): 
-        print("Book You want to borrow is choosen.")
-        self.book = book
-        self.haveBook = True
-        return self.book
+class TestyBiblioteki(unittest.TestCase):
       
-    def testujwypozyczenie(self):
-        result = TestBibliotekiJeden.haveBook
+     def testujbrakwypozyczenia(self):
+        cu = Customer() # tety powinny być od siebie niezależne, więc obiekty lepiej tworzyć bezpośrednio w testach
+        result = cu.haveBook
         self.assertEqual(result, False)
-        
-if __name__ == '__main__': 
-    unittest.main() 
-    
-#UNIT TEST 2
-class TestBibliotekiDwa(unittest.TestCase):
-     
-    book = "" 
-    haveBook = False
-    def returnBook(self): 
-        print("Book which you returning is {}".format(self.book))
-        if self.haveBook:
-            self.haveBook = False
-            return self.book
-        else:
-            self.book = ""
-            return False
           
         
-    def testujwypozyczenie(self):
-        result = TestBibliotekiDwa.haveBook
-        self.assertNotEqual(result, True)
+     def testujwypozyczenie(self):
+        cu = Customer()
+        cu.requestBook('jakas')
+        result = cu.haveBook
+        self.assertEqual(result, True)
+        
+    # testujemy klasy z danego kodu, więc wypadałoby tworzyć ich obiekty i używać ich metod, a nie ich kopii
         
 if __name__ == '__main__': 
-    unittest.main() 
+    unittest.main()
+    
+# 1,25pkt
             
